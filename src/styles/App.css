@@ -94,6 +94,7 @@ nav .hamburger {
 
 main {
   padding: 15vh 5%;
+  padding-bottom: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,6 +242,25 @@ main form .search:hover {
   padding: 3px;
 }
 
+footer {
+  background: #090909;
+  padding: 3% 5%;
+  color: lightgrey;
+  text-align: center;
+}
+
+footer a {
+  color: darkgrey;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-bottom: solid 2px darkgrey;
+}
+
+footer a:hover {
+  color: whitesmoke;
+}
+
 @media screen and (max-width: 800px) {
   nav {
     padding: 5% 0;
@@ -284,6 +304,7 @@ main form .search:hover {
   }
   main {
     padding: 15vh 1%;
+    padding-bottom: 5vh;
   }
   main .logo {
     width: 200px;
@@ -318,6 +339,9 @@ main form .search:hover {
   .projects .project .description,
   .projects .project .langsUsed {
     padding: 5px 0;
+  }
+  footer {
+    padding: 10%;
   }
 }
 /*# sourceMappingURL=App.css.map */

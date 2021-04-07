@@ -1,3 +1,4 @@
+$backgroundColorLevelNegative1: #090909;
 $backgroundColorLevel1: #131313;
 $backgroundColorLevel2: #181818;
 $backgroundColorLevel3: #222222;
@@ -71,6 +72,7 @@ nav {
 
 main {
   padding: 15vh 5%;
+  padding-bottom: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,6 +179,21 @@ main {
     }
   }
 }
+footer {
+  background: $backgroundColorLevelNegative1;
+  padding: 3% 5%;
+  color: $neutralTextColor;
+  text-align: center;
+  a {
+    color: darkgrey;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: solid 2px darkgrey;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
 
 @media screen and (max-width: 800px) {
   nav {
@@ -211,6 +228,7 @@ main {
   }
   main {
     padding: 15vh 1%;
+    padding-bottom: 5vh;
     .logo {
       width: 200px;
     }
@@ -242,5 +260,8 @@ main {
         padding: 5px 0;
       }
     }
+  }
+  footer {
+    padding: 10%;
   }
 }

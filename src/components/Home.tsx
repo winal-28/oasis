@@ -4,6 +4,7 @@ import { Project } from './Project';
 export const Home = () => {
 
     return (
+        <>
         <main>
             <img src="./oasislogo.png" alt="oasis logo" className="logo" />
             <form>
@@ -40,5 +41,10 @@ export const Home = () => {
                 <Project />
             </div>
         </main>
+        <footer>
+            <h4 className="title">Oasis by the Oasis Team</h4>
+            <a href="https://github.com/heybereket/oasis">Contibute on Github</a>
+        </footer>
+        </>
     )
 }
