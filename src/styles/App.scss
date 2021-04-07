@@ -1,0 +1,109 @@
+$backgroundColorLevel1: #131313;
+$backgroundColorLevel2: #181818;
+$backgroundColorLevel3: #222222;
+$accentColor: whitesmoke;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: $backgroundColorLevel1;
+  overflow-x: hidden !important;
+}
+nav {
+  background: $backgroundColorLevel2;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  padding: 0 5%;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 100px;
+  }
+  .navLinks {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    li {
+      height: 100%;
+      width: 100%;
+      .navLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: darkgrey;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $accentColor;
+          border-bottom: solid 5px $accentColor;
+          background: $backgroundColorLevel3;
+        }
+      }
+      .icon {
+        font-size: 2rem;
+        transform: translateY(3px);
+      }
+    }
+  }
+  .hamburger {
+    color: lightgray;
+    display: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
+main {
+  padding: 15vh 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 5% 0;
+    flex-direction: column;
+    justify-content: center;
+    .navLinks {
+      display: none;
+    }
+    .navLinksShow {
+      display: flex;
+      transform: translateY(19vh);
+      flex-direction: column;
+      background: $backgroundColorLevel2;
+      width: 100%;
+      min-height: 35vh;
+      .navLink {
+        padding: 3vh;
+        &:hover {
+          border-left: solid 5px $accentColor;
+          border-bottom: none !important;
+        }
+      }
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 5%;
+      cursor: pointer;
+    }
+  }
+  main {
+    .logo {
+      width: 200px;
+    }
+  }
+}
