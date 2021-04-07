@@ -1,7 +1,7 @@
 $backgroundColorLevel1: #131313;
 $backgroundColorLevel2: #181818;
 $backgroundColorLevel3: #222222;
-$backgroundColorLevel4: #282828;
+$backgroundColorLevel4: #393939;
 $accentColor: whitesmoke;
 $neutralTextColor: lightgrey;
 * {
@@ -16,6 +16,7 @@ body {
 }
 nav {
   background: $backgroundColorLevel2;
+  z-index: 1000;
   position: fixed;
   height: 10vh;
   width: 100vw;
@@ -70,10 +71,10 @@ main {
   flex-direction: column;
   align-items: center;
   .logo {
-    width: 300px;
+    width: 250px;
   }
   form {
-    padding: 3vh 10px;
+    padding: 1vh 10px;
     height: 10vh;
     width: 40%;
     margin: auto;
@@ -81,8 +82,8 @@ main {
       color: $neutralTextColor;
       outline: none;
       border: none;
-      font-size: 1.2rem;
-      padding: 10px;
+      font-size: 1rem;
+      padding: 3px 10px;
       width: 100%;
       background: $backgroundColorLevel3;
       transition: all 0.3s ease;
@@ -91,6 +92,30 @@ main {
         border-left: solid 5px $accentColor;
         background: $backgroundColorLevel4;
       }
+    }
+  }
+  .filterContainer {
+    padding: 1vh 0;
+    display: grid;
+    grid-template-columns: repeat(5, 90px);
+    .filterButton {
+      background: $backgroundColorLevel3;
+      border: none;
+      outline: none;
+      padding: 5px;
+      margin: 5px;
+      color: $neutralTextColor;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $accentColor;
+        color: $backgroundColorLevel3;
+      }
+    }
+    .selected {
+      background: $backgroundColorLevel4;
+      color: $accentColor;
     }
   }
 }
@@ -130,7 +155,13 @@ main {
       width: 200px;
     }
     form {
-      width: 90%;
+      width: 100%;
+    }
+    .filterContainer {
+      grid-template-columns: repeat(3, 90px);
+      .filterButtons {
+        font-size: 0.8rem;
+      }
     }
   }
 }

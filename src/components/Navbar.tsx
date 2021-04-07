@@ -7,6 +7,7 @@ export const NavBar = () => {
 
     const show = () => {
         navLinks?.classList.toggle('navLinksShow')
+        console.log("Sample Text")
     }
 
     return (

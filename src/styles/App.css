@@ -13,6 +13,7 @@ body {
 
 nav {
   background: #181818;
+  z-index: 1000;
   position: fixed;
   height: 10vh;
   width: 100vw;
@@ -104,11 +105,11 @@ main {
 }
 
 main .logo {
-  width: 300px;
+  width: 250px;
 }
 
 main form {
-  padding: 3vh 10px;
+  padding: 1vh 10px;
   height: 10vh;
   width: 40%;
   margin: auto;
@@ -118,8 +119,8 @@ main form .search {
   color: lightgrey;
   outline: none;
   border: none;
-  font-size: 1.2rem;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 3px 10px;
   width: 100%;
   background: #222222;
   -webkit-transition: all 0.3s ease;
@@ -129,7 +130,38 @@ main form .search {
 
 main form .search:hover {
   border-left: solid 5px whitesmoke;
-  background: #282828;
+  background: #393939;
+}
+
+main .filterContainer {
+  padding: 1vh 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (90px)[5];
+      grid-template-columns: repeat(5, 90px);
+}
+
+main .filterContainer .filterButton {
+  background: #222222;
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin: 5px;
+  color: lightgrey;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .filterContainer .filterButton:hover {
+  background: whitesmoke;
+  color: #222222;
+}
+
+main .filterContainer .selected {
+  background: #393939;
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 800px) {
@@ -177,7 +209,14 @@ main form .search:hover {
     width: 200px;
   }
   main form {
-    width: 90%;
+    width: 100%;
+  }
+  main .filterContainer {
+    -ms-grid-columns: (90px)[3];
+        grid-template-columns: repeat(3, 90px);
+  }
+  main .filterContainer .filterButtons {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
