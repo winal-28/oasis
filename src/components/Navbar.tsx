@@ -3,7 +3,6 @@ import { SiGithub } from "react-icons/si"
 
 export const NavBar = () => {
 
-    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.navLinks');
 
     const show = () => {

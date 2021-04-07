@@ -80,8 +80,9 @@ main {
       display: none;
     }
     .navLinksShow {
+      position: absolute;
+      top: 9vh;
       display: flex;
-      transform: translateY(19vh);
       flex-direction: column;
       background: $backgroundColorLevel2;
       width: 100%;
