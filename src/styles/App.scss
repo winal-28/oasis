@@ -2,8 +2,10 @@ $backgroundColorLevel1: #131313;
 $backgroundColorLevel2: #181818;
 $backgroundColorLevel3: #222222;
 $backgroundColorLevel4: #393939;
+$backgroundColorLevel5: #404040;
 $accentColor: whitesmoke;
 $neutralTextColor: lightgrey;
+$boxShadowNeutral: rgba(0, 0, 0, 0.11);
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +26,7 @@ nav {
   padding: 0 5%;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 0px 20px $boxShadowNeutral;
   .logo {
     width: 100px;
   }
@@ -65,6 +68,7 @@ nav {
     font-size: 1.5rem;
   }
 }
+
 main {
   padding: 15vh 5%;
   display: flex;
@@ -88,37 +92,90 @@ main {
       background: $backgroundColorLevel3;
       transition: all 0.3s ease;
       border-left: solid 5px $neutralTextColor;
+      box-shadow: 0px 0px 20px $boxShadowNeutral;
       &:hover {
         border-left: solid 5px $accentColor;
         background: $backgroundColorLevel4;
       }
     }
   }
-  .filterContainer {
-    padding: 1vh 0;
-    display: grid;
-    grid-template-columns: repeat(5, 90px);
-    .filterButton {
+}
+
+.filterContainer {
+  padding: 1vh 0;
+  display: grid;
+  grid-template-columns: repeat(5, 95px);
+  .filterButton {
+    background: $backgroundColorLevel3;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    color: $neutralTextColor;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+      background: $accentColor;
+      color: $backgroundColorLevel3;
+    }
+  }
+  .selected {
+    background: $backgroundColorLevel4;
+    color: $accentColor;
+  }
+}
+
+.projects {
+  width: 100%;
+  padding: 3%;
+  .project {
+    margin: 20px 0;
+    color: $neutralTextColor;
+    padding: 3%;
+    border-radius: 10px;
+    background: $backgroundColorLevel2;
+    width: 400px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 30px $boxShadowNeutral;
+    &:hover {
       background: $backgroundColorLevel3;
-      border: none;
-      outline: none;
-      padding: 5px;
-      margin: 5px;
-      color: $neutralTextColor;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      &:hover {
-        background: $accentColor;
-        color: $backgroundColorLevel3;
+    }
+    .pfp {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .projData {
+      display: flex;
+      padding: 10px 0;
+      align-items: center;
+      .title {
+        color: grey;
+        margin: 0 10px;
+        font-size: 1rem;
+        display: flex;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $accentColor;
+        }
       }
     }
-    .selected {
-      background: $backgroundColorLevel4;
-      color: $accentColor;
+    .description {
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    .langsUsed {
+      padding: 10px 0;
+      h5 {
+        width: 90px;
+        padding: 3px;
+      }
     }
   }
 }
+
 @media screen and (max-width: 800px) {
   nav {
     padding: 5% 0;
@@ -161,6 +218,24 @@ main {
       grid-template-columns: repeat(3, 90px);
       .filterButtons {
         font-size: 0.8rem;
+      }
+    }
+  }
+  .projects {
+    .project {
+      width: 100%;
+      padding: 10%;
+      .projData {
+        .title {
+          flex-direction: column;
+          font-size: 0.9rem;
+          line-height: 1rem;
+        }
+      }
+      .projData,
+      .description,
+      .langsUsed {
+        padding: 5px 0;
       }
     }
   }

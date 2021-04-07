@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Project } from './Project';
 
 export const Home = () => {
 
@@ -24,6 +25,11 @@ export const Home = () => {
                 <button className="filterButton">C++</button>
                 <button className="filterButton">Rust</button>
                 <button className="filterButton">React</button>
+            </div>
+            <div className="projects">
+                <Project />
+                <Project />
+                <Project />
             </div>
         </main>
     )

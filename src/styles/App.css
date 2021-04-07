@@ -27,6 +27,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
 }
 
 nav .logo {
@@ -126,6 +128,8 @@ main form .search {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-left: solid 5px lightgrey;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
 }
 
 main form .search:hover {
@@ -133,15 +137,15 @@ main form .search:hover {
   background: #393939;
 }
 
-main .filterContainer {
+.filterContainer {
   padding: 1vh 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (90px)[5];
-      grid-template-columns: repeat(5, 90px);
+  -ms-grid-columns: (95px)[5];
+      grid-template-columns: repeat(5, 95px);
 }
 
-main .filterContainer .filterButton {
+.filterContainer .filterButton {
   background: #222222;
   border: none;
   outline: none;
@@ -154,14 +158,82 @@ main .filterContainer .filterButton {
   transition: all 0.3s ease;
 }
 
-main .filterContainer .filterButton:hover {
+.filterContainer .filterButton:hover {
   background: whitesmoke;
   color: #222222;
 }
 
-main .filterContainer .selected {
+.filterContainer .selected {
   background: #393939;
   color: whitesmoke;
+}
+
+.projects {
+  width: 100%;
+  padding: 3%;
+}
+
+.projects .project {
+  margin: 20px 0;
+  color: lightgrey;
+  padding: 3%;
+  border-radius: 10px;
+  background: #181818;
+  width: 400px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.11);
+}
+
+.projects .project:hover {
+  background: #222222;
+}
+
+.projects .project .pfp {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.projects .project .projData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project .projData .title {
+  color: grey;
+  margin: 0 10px;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.projects .project .projData .title:hover {
+  color: whitesmoke;
+}
+
+.projects .project .description {
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.projects .project .langsUsed {
+  padding: 10px 0;
+}
+
+.projects .project .langsUsed h5 {
+  width: 90px;
+  padding: 3px;
 }
 
 @media screen and (max-width: 800px) {
@@ -217,6 +289,23 @@ main .filterContainer .selected {
   }
   main .filterContainer .filterButtons {
     font-size: 0.8rem;
+  }
+  .projects .project {
+    width: 100%;
+    padding: 10%;
+  }
+  .projects .project .projData .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .projects .project .projData,
+  .projects .project .description,
+  .projects .project .langsUsed {
+    padding: 5px 0;
   }
 }
 /*# sourceMappingURL=App.css.map */
