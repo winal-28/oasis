@@ -1,7 +1,9 @@
 $backgroundColorLevel1: #131313;
 $backgroundColorLevel2: #181818;
 $backgroundColorLevel3: #222222;
+$backgroundColorLevel4: #282828;
 $accentColor: whitesmoke;
+$neutralTextColor: lightgrey;
 * {
   padding: 0;
   margin: 0;
@@ -56,7 +58,7 @@ nav {
     }
   }
   .hamburger {
-    color: lightgray;
+    color: $neutralTextColor;
     display: none;
     text-decoration: none;
     font-size: 1.5rem;
@@ -69,6 +71,27 @@ main {
   align-items: center;
   .logo {
     width: 300px;
+  }
+  form {
+    padding: 3vh 10px;
+    height: 10vh;
+    width: 40%;
+    margin: auto;
+    .search {
+      color: $neutralTextColor;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+      padding: 10px;
+      width: 100%;
+      background: $backgroundColorLevel3;
+      transition: all 0.3s ease;
+      border-left: solid 5px $neutralTextColor;
+      &:hover {
+        border-left: solid 5px $accentColor;
+        background: $backgroundColorLevel4;
+      }
+    }
   }
 }
 @media screen and (max-width: 800px) {
@@ -105,6 +128,9 @@ main {
   main {
     .logo {
       width: 200px;
+    }
+    form {
+      width: 90%;
     }
   }
 }

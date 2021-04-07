@@ -83,7 +83,7 @@ nav .navLinks li .icon {
 }
 
 nav .hamburger {
-  color: lightgray;
+  color: lightgrey;
   display: none;
   text-decoration: none;
   font-size: 1.5rem;
@@ -105,6 +105,31 @@ main {
 
 main .logo {
   width: 300px;
+}
+
+main form {
+  padding: 3vh 10px;
+  height: 10vh;
+  width: 40%;
+  margin: auto;
+}
+
+main form .search {
+  color: lightgrey;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  background: #222222;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-left: solid 5px lightgrey;
+}
+
+main form .search:hover {
+  border-left: solid 5px whitesmoke;
+  background: #282828;
 }
 
 @media screen and (max-width: 800px) {
@@ -150,6 +175,9 @@ main .logo {
   }
   main .logo {
     width: 200px;
+  }
+  main form {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=App.css.map */
