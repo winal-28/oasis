@@ -170,16 +170,21 @@ main form .search:hover {
 
 .projects {
   width: 100%;
-  padding: 3%;
+  padding: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto(400px, 1fr);
+      grid-template-rows: auto(400px, 1fr);
+  gap: 20px;
 }
 
 .projects .project {
-  margin: 20px 0;
   color: lightgrey;
-  padding: 3%;
+  padding: 5%;
   border-radius: 10px;
   background: #181818;
-  width: 400px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.11);
@@ -277,6 +282,9 @@ main form .search:hover {
     right: 5%;
     cursor: pointer;
   }
+  main {
+    padding: 15vh 1%;
+  }
   main .logo {
     width: 200px;
   }
@@ -289,6 +297,10 @@ main form .search:hover {
   }
   main .filterContainer .filterButtons {
     font-size: 0.8rem;
+  }
+  .projects {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   .projects .project {
     width: 100%;

@@ -30,6 +30,14 @@ export const Home = () => {
                 <Project />
                 <Project />
                 <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
             </div>
         </main>
     )
